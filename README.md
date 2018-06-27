@@ -30,7 +30,7 @@
 ## 3. 使用
 
 ```bash
-python -f 001.gpx -t 001_china.gpx
+python --f 001.gpx --t 001_china.gpx
 ```
 
 会读取`001.gpx`，转换后写入`001_china.gpx`
