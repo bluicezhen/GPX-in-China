@@ -21,11 +21,6 @@
     ```bash
     pipenv install
     ```
-- 使用`pip`
-    
-    ```bash
-    pip install -r requirements.txt 
-    ```
 
 ## 3. 使用
 
