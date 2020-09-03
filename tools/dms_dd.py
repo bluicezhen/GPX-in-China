@@ -1,4 +1,4 @@
-def dd2dms(longitude: float, latitude: float):
+def dd2dms(latitude: float, longitude: float):
     """
     convert DD to DMS
     https://en.wikipedia.org/wiki/Decimal_degrees

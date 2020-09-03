@@ -1,6 +1,7 @@
 import click
 import gpxpy.gpx
-from lib import WGS84ToGCJ02
+from tools import WGS84ToGCJ02
+
 
 @click.command()
 @click.option("--f", help="from GPX(WGS84) file")
