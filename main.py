@@ -19,7 +19,7 @@ def main(f: str, t: str):
     for track in gpx_old.tracks:
         for segment in track.segments:
             for point in segment.points:
-                new_lat, new_lon = WGS84ToGCJ02.transform(point.latitude, point.longitude)
+                new_lat, new_lon = WGS84ToGCJ02.wgs84_to_gcj02(point.latitude, point.longitude)
                 gpx_new_segment.points.append(gpxpy.gpx.GPXTrackPoint(new_lat,
                                                                       new_lon,
                                                                       elevation=point.elevation,
