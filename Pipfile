@@ -1,20 +1,13 @@
 [[source]]
-
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
-
 [packages]
-
-currently = {git = "https://github.com/tkrajina/gpxpy.git", ref = "29911dbf10db0f40e6bc8ac1f719e30cc47677ed"}
-click = "*"
-
+gpxpy = "*"
+simplekml = "*"
 
 [dev-packages]
 
-
-
 [requires]
-
-python_version = "3.6"
+python_version = "3.9"
