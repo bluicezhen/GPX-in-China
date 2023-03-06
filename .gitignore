@@ -1,2 +1,6 @@
+*.gpx
+*.geojson
+*.kml
 *.pyc
 .idea/
+.vscode/
