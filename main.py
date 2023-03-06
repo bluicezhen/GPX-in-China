@@ -1,7 +1,25 @@
 import argparse
 import gpxpy.gpx
 import os
+import xml.etree.ElementTree as ET
 from lib import WGS84ToGCJ02
+
+
+def kml_wgs84_2_gcj02(from_path: str, to_path: str) -> None:
+    tree = ET.parse(from_path)
+    root = tree.getroot()
+
+    for coord in root.iter('{http://www.google.com/kml/ext/2.2}coord'):
+        location = coord.text.split(' ')
+        lon = float(location[0])
+        lat = float(location[1])
+        hig = location[2]
+
+        new_lat, new_lon = WGS84ToGCJ02.transform(lat, lon)
+
+        coord.text = f'{new_lon} {new_lat} {hig}'
+
+    tree.write(to_path, encoding='utf-8', xml_declaration=True)
 
 
 def gpx_wgs84_2_gcj02(from_path: str, to_path: str) -> None:
@@ -34,6 +52,8 @@ def main(args: argparse.Namespace):
 
     if file_extension == '.gpx':
         gpx_wgs84_2_gcj02(from_path, to_path)
+    elif file_extension == '.kml':
+        kml_wgs84_2_gcj02(from_path, to_path)
     else:
         print(f'Unsupported file extension: {file_extension}')
 

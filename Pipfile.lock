@@ -1,11 +1,11 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "68b4b5f24589f206d0847dadb0e39b5b37b4f4791786eec75d81ad700470b2d1"
+            "sha256": "1142b8c2252e5a710e58f46072e99ca81ea5144f0b34aed7efb32100ff8d36aa"
         },
         "pipfile-spec": 6,
         "requires": {
-            "python_version": "3.9"
+            "python_version": "3.11"
         },
         "sources": [
             {
@@ -22,13 +22,6 @@
             ],
             "index": "pypi",
             "version": "==1.5.0"
-        },
-        "simplekml": {
-            "hashes": [
-                "sha256:cda687be2754395fcab664e908ebf589facd41e8436d233d2be37a69efb1c536"
-            ],
-            "index": "pypi",
-            "version": "==1.3.6"
         }
     },
     "develop": {}
